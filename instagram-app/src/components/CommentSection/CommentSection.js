@@ -8,7 +8,10 @@ const CommentSection = (props) => {
 
 		<div>
 
-			<Comments />
+			<Comments 
+			likes={props.likes}
+			comments={props.comments}
+			/>
 			<AddComments />
 
 		</div>
