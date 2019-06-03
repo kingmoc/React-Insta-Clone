@@ -7,16 +7,11 @@ const SearchBar = (props) => {
 
 	return (
 
-		<div> 
-
-			<Container>
+		<div className="search-bar"> 			
 				
-				<InputGroup>
-					<Input placeholder="Search ... " />
-				</InputGroup>
-				
-			</Container>
-			
+			<InputGroup>
+				<Input placeholder="Search ... " />
+			</InputGroup>			
 		
  		</div>
 

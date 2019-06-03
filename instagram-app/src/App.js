@@ -5,6 +5,8 @@ import "./App.scss"
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar'
 
+import { Container } from 'reactstrap';
+
 class App extends Component {
 
   constructor() {
@@ -22,9 +24,9 @@ class App extends Component {
     return (
 
       <div>
-
+          
           <SearchBar />
-          {this.state.data.map(post => <PostContainer key={post.id} post={post}/>)}
+          {this.state.data.map(post => <PostContainer key={post.id} post={post}/>)}          
         
       </div>
     );
