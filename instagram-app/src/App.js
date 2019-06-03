@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import dummyData from "./data/dummy-data"
 import "./App.scss"
+
 import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar'
 
 class App extends Component {
 
@@ -21,6 +23,7 @@ class App extends Component {
 
       <div>
 
+          <SearchBar />
           {this.state.data.map(post => <PostContainer key={post.id} post={post}/>)}
         
       </div>

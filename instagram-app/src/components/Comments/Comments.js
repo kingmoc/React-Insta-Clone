@@ -8,32 +8,28 @@ const Comments = (props) => {
 
 	return (
 
-		<div>
+		<div>		
 
-			<Container>
+			<Row>
+				<Col xs="auto"><i class="far fa-heart"></i></Col>
+				<Col xs="auto"><i class="far fa-comment"></i></Col>	
+			</Row>
 
-				<Row>
-					<Col><i class="far fa-heart"></i></Col>
-					<Col><i class="far fa-comment"></i></Col>				
-				</Row>
+			<Row>
+				<Col>{props.likes} likes</Col>
+			</Row>					
+				
+			{props.comments.map(comment => {
 
-				<Row>
-					<Col>{props.likes}</Col>
-				</Row>					
-					
-				{props.comments.map(comment => {
+				return (
+					<Row className="text-content">
+						<Col>
+							<span>{comment.username}</span> {comment.text}
+						</Col>
+					</Row>
+				)
 
-					return (
-						<Row>
-							<Col>
-								<span>{comment.username}</span> {comment.text}
-							</Col>
-						</Row>
-					)
-
-				})}				
-
-			</Container>
+			})}		
 
 		</div>
 	)

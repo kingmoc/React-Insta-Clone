@@ -17,7 +17,7 @@ class PostContainer extends Component {
 				
 				<Container>
 					<Row>
-						<Col sm="12" md={{ size: 8, offset: 3 }}>
+						<Col sm="12" md={{ size: 8, offset: 2 }}>
 							<Card>
 								<CardTitle>
 									<Header 

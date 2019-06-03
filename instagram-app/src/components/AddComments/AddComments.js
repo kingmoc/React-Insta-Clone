@@ -1,12 +1,17 @@
 import React from 'react';
+import "./AddComments.scss"
+
+import { InputGroup, Input } from 'reactstrap';
 
 const AddComments = (props) => {
 
 	return (
 
-		<div>
+		<div className="addCom">
 
-			{/* Test */}
+			<InputGroup>
+				<Input placeholder="Add Comment" />
+			</InputGroup>
 
 		</div>
 	)
