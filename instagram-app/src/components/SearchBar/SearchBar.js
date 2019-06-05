@@ -8,10 +8,18 @@ const SearchBar = (props) => {
 	return (
 
 		<div className="search-bar"> 			
-				
-			<InputGroup>
-				<Input placeholder="Search ... " />
-			</InputGroup>			
+
+			<Container>
+				<Row>
+					<Col sm="12" md={{ size: 8, offset: 2 }}>	
+						<InputGroup>
+							<Input 
+							placeholder="Search ... "
+							/>
+						</InputGroup>
+					</Col>
+				</Row>
+			</Container>			
 		
  		</div>
 

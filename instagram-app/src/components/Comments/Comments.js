@@ -1,38 +1,62 @@
 import React from 'react';
 import "./Comments.scss"
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
-const Comments = (props) => {
 
-	console.log(props.comments)
+class Comments extends React.Component {
 
-	return (
+	state = {
+		liked: false,
+		likes: this.props.likes
+	}
 
-		<div>		
+	like = e => {
+			
+		if(this.state.liked) {
+			
+			this.setState({
+				liked: false,
+				likes: this.state.likes - 1 
+			})
+		} else {
+			this.setState({
+				liked: true,
+				likes: this.state.likes + 1
+			})
+		}
 
-			<Row>
-				<Col xs="auto"><i class="far fa-heart"></i></Col>
-				<Col xs="auto"><i class="far fa-comment"></i></Col>	
-			</Row>
+	}
 
-			<Row>
-				<Col>{props.likes} likes</Col>
-			</Row>					
-				
-			{props.comments.map(comment => {
+	
+	render () {
+		return (
 
-				return (
-					<Row className="text-content">
-						<Col>
-							<span>{comment.username}</span> {comment.text}
-						</Col>
-					</Row>
-				)
+			<div>		
 
-			})}		
+				<Row>
+					<Col xs="auto"><i onClick={this.like} className={`${this.state.liked ? 'fas' : 'far'} fa-heart`}></i></Col>
+					<Col xs="auto"><i onClick={this.props.commentHide} className="far fa-comment"></i></Col>	
+				</Row>
 
-		</div>
-	)
+				<Row>
+					<Col>{this.state.likes} likes</Col>
+				</Row>					
+					
+				{this.props.comments.map(comment => {
+
+					return (
+						<Row key={comment.id} className="text-content">
+							<Col>
+								<span>{comment.username}</span> {comment.text}
+							</Col>
+						</Row>
+					)
+
+				})}		
+
+			</div>
+		)
+	}
 }
 
 export default Comments;

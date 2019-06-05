@@ -9,8 +9,9 @@ import { Card, CardTitle, Container, Row, Col } from 'reactstrap';
 
 class PostContainer extends Component {
 
+
 	render() {
-		console.log(this.props.post.comments)
+		// console.log(this.props.commentArray)
 		return (
 
 			<div>
@@ -30,6 +31,11 @@ class PostContainer extends Component {
 								<CommentSection 
 								likes={this.props.post.likes}
 								comments={this.props.post.comments}
+								time={this.props.post.timestamp}
+								like={this.props.like}
+								commentHide={this.props.commentHide}
+								handleChanges={this.props.handleChanges}
+								commentArray={this.props.commentArray}
 								/>
 							</Card>
 						</Col>
