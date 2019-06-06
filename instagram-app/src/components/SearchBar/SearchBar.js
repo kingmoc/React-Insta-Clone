@@ -9,27 +9,17 @@ const SearchBar = (props) => {
 	return (
 
 		<div className="search-bar"> 			
-
-			<Container>
-				<Row>
-					<Col sm="12" md={{ size: 8, offset: 2 }}>
-						<Form 
-						// onSubmit={props.search}
-						value={props.searchInput}
-						>
-							<InputGroup>
-								<Input 
-								onChange={props.search}
-								placeholder="Search ... "
-								// value={props.searchInput}
-								name="searchInput"
-								type="text"
-								/>
-							</InputGroup>
-						</Form>	
-					</Col>
-				</Row>
-			</Container>			
+				
+			<Form>
+				<InputGroup>
+					<Input 
+					onChange={props.search}
+					placeholder=" Search ... "
+					name="searchInput"
+					type="text"
+					/>
+				</InputGroup>
+			</Form>						
 		
  		</div>
 

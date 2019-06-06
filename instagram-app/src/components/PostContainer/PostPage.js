@@ -2,6 +2,7 @@ import React from 'react';
 import PostContainer from '../PostContainer/PostContainer'
 import SearchBar from  '../SearchBar/SearchBar'
 import dummyData from '../../data/dummy-data'
+import TopNav from '../TopNav/TopNav'
 
 class PostPage extends React.Component {
 
@@ -40,11 +41,8 @@ class PostPage extends React.Component {
 	   return (
 		 <div>
 			 
-			 <SearchBar 
-			 handleChanges={this.handleChanges}
-			 searchInput={this.state.searchInput}
-			 search={this.search}
-			 />
+			 <TopNav search={this.search}/>			
+
 			 {allPost.map((post, index) => 
 			 <PostContainer 
 			 key={post.id} 

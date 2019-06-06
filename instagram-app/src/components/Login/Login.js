@@ -34,7 +34,7 @@ class Login extends React.Component {
 					<Col sm="12" md={{ size: 6, offset: 3 }}>
 						<Form onSubmit={this.login}> 
 
-							<legend>Login</legend>
+							<legend>My Insta Project Login</legend>
 							<Label>Username</Label>
 							<Input 
 							onChange={this.handleChanges} 
