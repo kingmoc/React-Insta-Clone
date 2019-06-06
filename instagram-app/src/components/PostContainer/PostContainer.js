@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import "./PostContainer.scss"
 
-import Header from '../Header/Header'
-import Image from '../Image/Image'
-import CommentSection from '../CommentSection/CommentSection'
+import Header from './Header/Header'
+import Image from './Image/Image'
+import CommentSection from './CommentSection/CommentSection'
 
 import { Card, CardTitle, Container, Row, Col } from 'reactstrap';
 
@@ -11,10 +11,10 @@ class PostContainer extends Component {
 
 
 	render() {
-		// console.log(this.props.commentArray)
+		console.log(this.props)
 		return (
 
-			<div>
+			<div className="full">
 				
 				<Container>
 					<Row>

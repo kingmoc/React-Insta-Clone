@@ -1,6 +1,6 @@
 import React from 'react';
-import Comments from '../Comments/Comments'
-import AddComments from '../AddComments/AddComments'
+import Comments from './Comments/Comments'
+import AddComments from './AddComments/AddComments'
 import "./CommentSection.scss"
 import { Container } from 'reactstrap';
 import Moment from 'react-moment';
@@ -12,7 +12,7 @@ class CommentSection extends React.Component {
 
 	updateCommentArray = (commentTxt) => {
 		
-		let commentTemp = [...this.state.commentArray, { username: 'guest', text: commentTxt }];
+		let commentTemp = [...this.state.commentArray, { username: localStorage.getItem('username'), text: commentTxt }];
 		// console.log(commentTemp)
 
 		this.setState({

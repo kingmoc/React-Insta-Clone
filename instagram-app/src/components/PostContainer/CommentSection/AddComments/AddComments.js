@@ -18,6 +18,7 @@ class AddComments extends React.Component {
 			input: e.target.value
 		})
 	}
+
 	onSubEvent = e => {
 
 		e.preventDefault();
@@ -26,7 +27,6 @@ class AddComments extends React.Component {
 		this.setState({
 			input: ''
 		})
-		
 	}
 
 

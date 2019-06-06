@@ -1,50 +1,21 @@
-import React, { Component } from 'react';
-import dummyData from "./data/dummy-data"
+import React from 'react';
+import PostPage from './components/PostContainer/PostPage'
+import withAuthenticate from './components/authentication/withAuthenticate'
 import "./App.scss"
-
-import PostContainer from './components/PostContainer/PostContainer';
-import SearchBar from './components/SearchBar/SearchBar'
-
-// import { Container } from 'reactstrap';
+import Login from './components/Login/Login';
 
 
-class App extends Component {
+const App = () => {
 
- state = {
-      input: '',
-      data: []
-    };
-    // console.log(this.state.data)
-  
+  const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(Login)
 
-  componentDidMount() {
-    this.setState({ data: dummyData })
-  }
+  return (
+    <div>
+      {/* <Login /> */}
+      <ComponentFromWithAuthenticate />
+    </div>
+  )
 
-  search = () => {
-    console.log("works")
-  }
-
- render() {
-   // console.log(array);   
-
-    return (
-      <div>
-          
-          <SearchBar />
-          {this.state.data.map((post, index) => 
-          <PostContainer 
-          key={post.id} 
-          post={post}
-          like={this.like}
-          commentHide={this.commentHide}
-          handleChanges={this.handleChanges}
-          commentArray={post.comments}
-          />)}          
-        
-      </div>
-    );
-  }
 }
 
 
