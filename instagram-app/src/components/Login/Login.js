@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Login.scss"
 
-import { Button, Form, Label, Input, Container, Col } from 'reactstrap';
+import { Button, Form, Label, Input, Container, Col, Row } from 'reactstrap';
 
 class Login extends React.Component {
 
@@ -29,32 +29,36 @@ class Login extends React.Component {
 
 	render() {
 	return (
-			<Container>
-				<Form onSubmit={this.login}> 
+			<Container className="login">
+				<Row>
+					<Col sm="12" md={{ size: 6, offset: 3 }}>
+						<Form onSubmit={this.login}> 
 
-					<legend>Login</legend>
-					<Label>Username</Label>
-					<Input 
-					onChange={this.handleChanges} 
-					type="text" 
-					name="username" 
-					placeholder="username" 
-					value={this.state.username}
-					/>
+							<legend>Login</legend>
+							<Label>Username</Label>
+							<Input 
+							onChange={this.handleChanges} 
+							type="text" 
+							name="username" 
+							placeholder="username" 
+							value={this.state.username}
+							/>
 
-					<Label for="examplePassword">Password</Label>
-					<Input 
-					onChange={this.handleChanges} 
-					type="password" 
-					name="password" 
-					placeholder="type your password ..."
-					value={this.state.password} 
-					/>
-					<Col sm={{ size: 10, offset: 2 }}>
-						<Button>Login</Button>
+							<Label for="examplePassword">Password</Label>
+							<Input 
+							onChange={this.handleChanges} 
+							type="password" 
+							name="password" 
+							placeholder="type your password ..."
+							value={this.state.password} 
+							/>
+							<Col>
+								<Button color="primary" size="lg">Login</Button>
+							</Col>
+
+						</Form>
 					</Col>
-
-				</Form>
+				</Row>
 			</Container>
 		)
 	}
