@@ -1,0 +1,10 @@
+header {
+	display: flex;
+	align-items: center;
+	height: 90px;
+
+	img {
+		border-radius: 50%;	
+		transform: scale(.5, .5);		
+	}
+}
