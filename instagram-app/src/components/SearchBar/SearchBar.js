@@ -14,7 +14,7 @@ const SearchBar = (props) => {
 				<InputGroup>
 					<Input 
 					onChange={props.search}
-					placeholder=" Search ... "
+					placeholder=" &#x1f50d;   Search ... "
 					name="searchInput"
 					type="text"
 					/>
